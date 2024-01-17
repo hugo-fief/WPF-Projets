@@ -1,0 +1,54 @@
+﻿<Window x:Class="BorneLaPoste.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Page d'accueil" Height="600" Width="950" Background="#FFA500" 
+        ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="50"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
+        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Bienvenue. Que voulez-vous faire ?" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Nova"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Fill="#FF0000" />
+        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Content="ICI ouvrez un compte en moins de 10 minutes" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Arial Nova" Foreground="#FFFFFF"/>
+
+        <Button Grid.Column="0" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
+        <Image Grid.Column="0" Grid.Row="2" Height="80" Width="80" Source="./img/main/lettre.png" Margin="60,49,60,105"/>
+        <Label Grid.Row="2" Content="Lettre" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0"/>
+
+        <Button Grid.Column="1" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
+        <Image Grid.Column="1" Grid.Row="2" Height="80" Width="80" Source="./img/main/lettre-recommandée.png" Margin="60,49,60,105"/>
+        <Label Grid.Column="1" Grid.Row="2" Content="Lettre recommandée" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0"/>
+
+        <Button Grid.Column="2" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
+        <Image Grid.Column="2" Grid.Row="2" Height="80" Width="80" Source="./img/main/colis.png" Margin="60,49,60,105"/>
+        <Label Grid.Column="2" Grid.Row="2" Content="Colis" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0" RenderTransformOrigin="0.586,1.395"/>
+
+        <Button Grid.Column="3" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
+        <Image Grid.Column="3" Grid.Row="2" Height="80" Width="80" Source="./img/main/colis-express.png" Margin="60,49,60,105"/>
+        <Label Grid.Column="3" Grid.Row="2" Content="Envoi express" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0" RenderTransformOrigin="0.513,1.668"/>
+
+        <Rectangle Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Fill="#FFFFFF" />
+        <Label Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Content="Tarifs et conditions de vente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        <Rectangle Grid.Column="1" Grid.Row="3" Width="2" Margin="199,0,0,1" Stroke="Black" HorizontalAlignment="Left" Grid.ColumnSpan="2" />
+
+        <Label Grid.Column="2" Grid.Row="3" Content="Payment souhaitée" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        <Label Grid.Column="3" Grid.Row="3" Content="Mode sombre" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        <Rectangle Grid.Column="3" Grid.Row="3" Width="2" Stroke="Black" HorizontalAlignment="Left" />
+
+    </Grid>
+</Window>

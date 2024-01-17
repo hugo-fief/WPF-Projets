@@ -1,0 +1,14 @@
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.csproj.AssemblyReference.cache
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\MainWindow.baml
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\MainWindow.g.cs
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\App.g.cs
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC_MarkupCompile.cache
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.g.resources
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.Properties.Resources.resources
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.csproj.GenerateResource.cache
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.csproj.CoreCompileInputs.cache
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\bin\Debug\CalculatricePC.exe.config
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\bin\Debug\CalculatricePC.exe
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\bin\Debug\CalculatricePC.pdb
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.exe
+C:\Users\hfief\Documents\coop-r\Apprentissage\Formation WPF\Logiciel Calculatrice\CalculatricePC\CalculatricePC\obj\Debug\CalculatricePC.pdb

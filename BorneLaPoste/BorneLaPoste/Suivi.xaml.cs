@@ -1,6 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
+using BorneLaPoste.Shared;
 
 namespace BorneLaPoste
 {
@@ -43,9 +43,8 @@ namespace BorneLaPoste
                 decimal price = decimal.Parse(clickedButton?.Tag?.ToString());
                 decimal total = price + OrderData.Price;
 
-                OrderData orderData = new OrderData { Price = total };
-
-                Order orderForm = new Order(orderData);
+                OrderData.Price = total;
+                Order orderForm = new Order(OrderData);
 
                 orderForm.Owner = Application.Current.MainWindow;
                 orderForm.WindowStartupLocation = WindowStartupLocation.CenterScreen;

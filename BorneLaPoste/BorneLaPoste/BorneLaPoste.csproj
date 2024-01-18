@@ -58,14 +58,14 @@
     <Compile Include="Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
     </Compile>
-    <Compile Include="OrderData.cs" />
+    <Compile Include="Shared\OrderData.cs" />
     <Compile Include="Produit.xaml.cs">
       <DependentUpon>Produit.xaml</DependentUpon>
     </Compile>
     <Compile Include="Suivi.xaml.cs">
       <DependentUpon>Suivi.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Utils.cs" />
+    <Compile Include="Shared\Utils.cs" />
     <Page Include="Destination.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

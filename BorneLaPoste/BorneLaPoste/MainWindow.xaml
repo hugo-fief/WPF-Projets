@@ -43,11 +43,11 @@
         <Label Grid.Column="3" Grid.Row="2" Content="Envoi express" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0" RenderTransformOrigin="0.513,1.668"/>
 
         <Rectangle Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Fill="#FFFFFF" />
-        <Label Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Content="Tarifs et conditions de vente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        <Label Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Content="Tarifs et conditions générales de vente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
         <Rectangle Grid.Column="1" Grid.Row="3" Width="2" Margin="199,0,0,1" Stroke="Black" HorizontalAlignment="Left" Grid.ColumnSpan="2" />
 
-        <Label Grid.Column="2" Grid.Row="3" Content="Payment souhaitée" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
-        <Label Grid.Column="3" Grid.Row="3" Content="Mode sombre" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        <Label Grid.Column="2" Grid.Row="3" Content="Panier Smartéo" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        <Label Grid.Column="3" Grid.Row="3" Content="Mode accessible" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
         <Rectangle Grid.Column="3" Grid.Row="3" Width="2" Stroke="Black" HorizontalAlignment="Left" />
 
     </Grid>

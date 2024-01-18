@@ -1,7 +1,6 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 
-namespace BorneLaPoste
+namespace BorneLaPoste.Shared
 {
     public class Utils
     {
@@ -10,7 +9,7 @@ namespace BorneLaPoste
         /// </summary>
         /// <param name="windowType"></param>
         /// <returns></returns>
-        public bool IsAlreadyOpen(Type windowType)
+        public bool IsAlreadyOpen(System.Type windowType)
         {
             foreach (Window window in Application.Current.Windows)
             {

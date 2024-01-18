@@ -20,13 +20,13 @@
         <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Souhaitez-vous un service de suivi" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Nova"/>
 
         <Button Grid.Column="0" Grid.Row="1" Height="100" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,10,10,100" FontWeight="Bold" FontFamily="Arial Nova" Click="OrderOpen" Tag="0,45"/>
-        <Image Grid.Column="0" Grid.Row="1" Height="70" Width="60" Source="./img/suivi/service-suivi.png" Margin="40,25,850,127"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Service de suivi" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="128,42,0,0"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="0,45 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,45,50,0" RenderTransformOrigin="0.566,1.067"/>
+        <Image Grid.Column="0" Grid.Row="1" Source="./img/suivi/service-suivi.png" Margin="28,29,824,117"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Service de suivi" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="144,38,0,0"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="0,45 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,42,51,0" RenderTransformOrigin="0.566,1.067"/>
 
         <Button Grid.Column="0" Grid.Row="1" Height="90" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,132,10,0" FontWeight="Bold" FontFamily="Arial Nova" Click="OrderOpen" Tag="0,0"/>
-        <Image Grid.Column="0" Grid.Row="1" Height="60" Width="60" Source="./img/suivi/non-merci.png" Margin="40,147,850,15" RenderTransformOrigin="0.068,0.545"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Non, merci" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="128,156,0,0"/>
+        <Image Grid.Column="0" Grid.Row="1" Source="./img/suivi/non-merci.png" Margin="32,143,836,11" RenderTransformOrigin="0.068,0.545"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Non, merci" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="144,156,0,0" RenderTransformOrigin="0.641,0.428"/>
 
 
         <Button Grid.Column="0" Grid.Row="3" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnProductWindow" Grid.RowSpan="2"/>

@@ -1,8 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using System;
-using System.Diagnostics;
-using System.Globalization;
+using BorneLaPoste.Shared;
 
 namespace BorneLaPoste
 {
@@ -38,9 +36,14 @@ namespace BorneLaPoste
             if (!isFormOpen)
             {
                 Button clickedButton = sender as Button;
-                decimal price = decimal.Parse(clickedButton?.Tag?.ToString());
+                string productContent = clickedButton?.Tag?.ToString();
 
-                OrderData orderData = new OrderData { Price = price };
+                string[] formattedContent = productContent?.Split(new string[] { " - " }, System.StringSplitOptions.RemoveEmptyEntries);
+
+                decimal price = decimal.Parse(formattedContent[0]);
+                string name = formattedContent[1];
+
+                OrderData orderData = new OrderData { Price = price, Name = name };
 
                 Suivi suiviForm = new Suivi(orderData);
 

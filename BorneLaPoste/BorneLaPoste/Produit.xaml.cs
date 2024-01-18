@@ -1,6 +1,8 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
+using System;
+using System.Diagnostics;
+using System.Globalization;
 
 namespace BorneLaPoste
 {
@@ -35,11 +37,10 @@ namespace BorneLaPoste
             bool isFormOpen = utils.IsAlreadyOpen(typeof(Suivi));
             if (!isFormOpen)
             {
-                OrderData orderData = new OrderData { Price = 12 };
+                Button clickedButton = sender as Button;
+                decimal price = decimal.Parse(clickedButton?.Tag?.ToString());
 
-                var toto = ((Button)sender).Content.ToString();
-                var titi = ((Button)sender);
-                var tonto = ((Label)sender).Content.ToString();
+                OrderData orderData = new OrderData { Price = price };
 
                 Suivi suiviForm = new Suivi(orderData);
 

@@ -2,7 +2,7 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:shared="clr-namespace:BorneLaPoste.Shared"
         mc:Ignorable="d"
         Title="Page de payment" Height="600" Width="950" Background="#FFA500">
     <Grid>
@@ -20,9 +20,17 @@
         <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Vous avez commandé" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Nova"/>
 
         <Button Grid.Column="0" Grid.Row="1" Height="100" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,10,10,100" FontWeight="Bold" FontFamily="Arial Nova"/>
-        <Image Grid.Column="0" Grid.Row="1" Height="70" Width="60" Source="./img/suivi/service-suivi.png" Margin="40,25,850,127"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Service de suivi" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="128,42,0,0"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="0,45 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,45,50,0" RenderTransformOrigin="0.566,1.067"/>
+
+        <Button Grid.Column="0" Grid.Row="1" Content="-" Cursor="Hand" Width="63" Click="DecreaseQuantity" HorizontalAlignment="Left" Margin="35,33,0,134" Background="DarkBlue" Foreground="White" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="basketQuantity" Grid.Column="0" Grid.Row="1" Text="1" TextAlignment="Center" HorizontalAlignment="Left" Margin="119,33,0,134" Width="64" Foreground="DarkBlue" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" VerticalContentAlignment="Center"/>
+        <Button Grid.Column="0" Grid.Row="1" Content="+" Cursor="Hand" Width="72" Click="IncreaseQuantity" HorizontalAlignment="Right" Margin="0,33,671,134" RenderTransformOrigin="3.552,0.605" Background="LightGray" Foreground="DarkBlue" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" VerticalContentAlignment="Center"/>
+
+        <Label x:Name="basketName" Grid.Row="1" Content="Calcul en cours" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,42,0,0"/>
+        <Label x:Name="basketPrice" Grid.Column="0" Grid.Row="1" Content="Calcul en cours" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,44,44,0" RenderTransformOrigin="0.566,1.067"/>
+
+        <Button Grid.Column="0" Grid.Row="2" Content="Acheter un autre article" Cursor="Hand" Padding="15" Height="70" HorizontalAlignment="Center" Background="White" Foreground="Black" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" VerticalAlignment="Top" Click="ReturnSuiviWindow" Margin="0,111,0,0"/>
+        <Button Grid.Column="0" Grid.Row="2" Content="Payer" Padding="15 15 65 15" Cursor="Hand" Height="70" HorizontalAlignment="Left" Background="Black" Foreground="White" FontSize="24" FontWeight="Bold" FontFamily="Arial Nova" VerticalAlignment="Top" Click="CardOpen" Margin="673,111,0,0" Width="188"/>
+        <Image Grid.Column="0" Grid.Row="2" Source="./img/order/flèche-payment.png" Margin="781,127,107,45" RenderTransformOrigin="-0.372,0.6"/>
 
         <Button Grid.Column="0" Grid.Row="3" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnSuiviWindow" Grid.RowSpan="2"/>
         <Image Grid.Column="0" Grid.Row="3" Source="./img/shared/retour.png" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="50" Height="50" RenderTransformOrigin="0.101,0.528"/>

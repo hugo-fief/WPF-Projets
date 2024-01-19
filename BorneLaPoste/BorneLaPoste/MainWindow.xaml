@@ -6,7 +6,7 @@
         mc:Ignorable="d"
         Title="Page d'accueil" Height="600" Width="950" Background="#FFA500" 
         ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" WindowStartupLocation="CenterScreen">
-    <Grid>
+    <Grid Cursor="Hand">
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
             <RowDefinition Height="50"></RowDefinition>
@@ -49,6 +49,5 @@
         <Label Grid.Column="2" Grid.Row="3" Content="Panier Smartéo" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
         <Label Grid.Column="3" Grid.Row="3" Content="Mode accessible" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
         <Rectangle Grid.Column="3" Grid.Row="3" Width="2" Stroke="Black" HorizontalAlignment="Left" />
-
     </Grid>
 </Window>

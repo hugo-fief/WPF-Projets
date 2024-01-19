@@ -6,12 +6,25 @@
         mc:Ignorable="d"
         Title="Page d'accueil" Height="600" Width="950" Background="#FFA500" 
         ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" WindowStartupLocation="CenterScreen">
-    <Grid Cursor="Hand">
+
+    <Window.Resources>
+        <Style x:Key="MainButtonStyle" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Height" Value="200"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Arial Nova"/>
+        </Style>
+
+        <DropShadowEffect x:Key="ShadowEffect" ShadowDepth="5" BlurRadius="5" Color="#A9A9A9"/>
+    </Window.Resources>
+
+    <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="100"></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="70"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
@@ -20,34 +33,47 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
-        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Bienvenue. Que voulez-vous faire ?" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Nova"/>
+        <Border Grid.ColumnSpan="4" Background="#E74C3C" CornerRadius="15" BorderThickness="0" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="Bienvenue. Que voulez-vous faire ?" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial Nova" Foreground="White"/>
+        </Border>
 
-        <Rectangle Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Fill="#FF0000" />
-        <Label Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Content="ICI ouvrez un compte en moins de 10 minutes" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="22" FontFamily="Arial Nova" Foreground="#FFFFFF"/>
+        <Border Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="4" Background="#3498DB" CornerRadius="5" Margin="0,5,0,5" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="ICI ouvrez un compte en moins de 10 minutes" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="26" FontFamily="Arial Nova" Foreground="White"/>
+        </Border>
 
-        <Button Grid.Column="0" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
-        <Image Grid.Column="0" Grid.Row="2" Height="80" Width="80" Source="./img/main/lettre.png" Margin="60,49,60,105"/>
-        <Label Grid.Row="2" Content="Lettre" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0"/>
+        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="Tarifs et conditions&#10; générales de vente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        </Border>
 
-        <Button Grid.Column="1" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
-        <Image Grid.Column="1" Grid.Row="2" Height="80" Width="80" Source="./img/main/lettre-recommandée.png" Margin="60,49,60,105"/>
-        <Label Grid.Column="1" Grid.Row="2" Content="Lettre recommandée" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0"/>
+        <Button Grid.Column="0" Grid.Row="2" Click="DestinationOpen" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
+        <Image Grid.Column="0" Grid.Row="2" Source="./img/main/lettre.png" Margin="64,81,64,125"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Lettre" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,191,0,0"/>
 
-        <Button Grid.Column="2" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
-        <Image Grid.Column="2" Grid.Row="2" Height="80" Width="80" Source="./img/main/colis.png" Margin="60,49,60,105"/>
-        <Label Grid.Column="2" Grid.Row="2" Content="Colis" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0" RenderTransformOrigin="0.586,1.395"/>
+        <Button Grid.Column="1" Grid.Row="2" Click="DestinationOpen" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
+        <Image Grid.Column="1" Grid.Row="2" Source="./img/main/lettre-recommandée.png" Margin="72,76,63,120"/>
+        <Label Grid.Column="1" Grid.Row="2" Content="Lettre recommandée" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,191,0,0"/>
 
-        <Button Grid.Column="3" Grid.Row="2" Cursor="Hand" Background="#FFFFFF" Margin="10 20" Height="200" FontWeight="Bold" FontFamily="Arial Nova" Click="DestionationOpen"/>
-        <Image Grid.Column="3" Grid.Row="2" Height="80" Width="80" Source="./img/main/colis-express.png" Margin="60,49,60,105"/>
-        <Label Grid.Column="3" Grid.Row="2" Content="Envoi express" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,208,0,0" RenderTransformOrigin="0.513,1.668"/>
+        <Button Grid.Column="2" Grid.Row="2" Click="DestinationOpen" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
+        <Image Grid.Column="2" Grid.Row="2" Source="./img/main/colis.png" Margin="53,76,52,120" RenderTransformOrigin="0.516,0.189"/>
+        <Label Grid.Column="2" Grid.Row="2" Content="Colis" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,191,0,0" RenderTransformOrigin="1.039,0.695"/>
 
-        <Rectangle Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Fill="#FFFFFF" />
-        <Label Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Content="Tarifs et conditions générales de vente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
-        <Rectangle Grid.Column="1" Grid.Row="3" Width="2" Margin="199,0,0,1" Stroke="Black" HorizontalAlignment="Left" Grid.ColumnSpan="2" />
+        <Button Grid.Column="3" Grid.Row="2" Click="DestinationOpen" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
+        <Image Grid.Column="3" Grid.Row="2" Source="./img/main/colis-express.png" Margin="44,76,44,120"/>
+        <Label Grid.Column="3" Grid.Row="2" Content="Envoi express" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,191,0,0" RenderTransformOrigin="0.553,0.913"/>
 
-        <Label Grid.Column="2" Grid.Row="3" Content="Panier Smartéo" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
-        <Label Grid.Column="3" Grid.Row="3" Content="Mode accessible" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
-        <Rectangle Grid.Column="3" Grid.Row="3" Width="2" Stroke="Black" HorizontalAlignment="Left" />
+        <Border Grid.Column="2" Grid.Row="2" Width="2" Margin="0,314,0,0" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Effect="{StaticResource ShadowEffect}" Grid.RowSpan="2"/>
+        <Border Grid.Column="2" Grid.Row="2" Width="2" Margin="237,314,0,0" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Effect="{StaticResource ShadowEffect}" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+
+        <Border Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="Tarifs et conditions&#10;générales de vente" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        </Border>
+
+        <Border Grid.Column="2" Grid.Row="3" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="Panier Smartéo" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        </Border>
+
+        <Border Grid.Column="3" Grid.Row="3" Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="5" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="Mode accessible" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Arial Nova"/>
+        </Border>
     </Grid>
 </Window>

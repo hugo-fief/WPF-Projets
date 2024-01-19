@@ -18,7 +18,7 @@ namespace BorneLaPoste
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void DestionationOpen(object sender, RoutedEventArgs e)
+        private void DestinationOpen(object sender, RoutedEventArgs e)
         {
             Utils utils = new Utils();
             bool isFormOpen = utils.IsAlreadyOpen(typeof(Destination));

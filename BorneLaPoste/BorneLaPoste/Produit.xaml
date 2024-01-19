@@ -4,13 +4,29 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Page de produit" Height="600" Width="950" Background="#FFA500">
+        Title="Page de produit" Height="600" Width="950" Background="#FFA500"
+        ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <Style x:Key="MainButtonStyle" TargetType="Button">
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="Height" Value="200"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Arial Nova"/>
+        </Style>
+
+        <DropShadowEffect x:Key="ShadowEffect" ShadowDepth="5" BlurRadius="5" Color="#A9A9A9"/>
+    </Window.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="70"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
             <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
-            <RowDefinition></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
+            <RowDefinition Height="90"></RowDefinition>
             <RowDefinition></RowDefinition>
             <RowDefinition Height="70"></RowDefinition>
         </Grid.RowDefinitions>
@@ -18,43 +34,44 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Rectangle Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4"/>
-        <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="4" Content="Choisissez votre produit" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontFamily="Arial Nova"/>
+        <Border Grid.ColumnSpan="4" Background="#E74C3C" CornerRadius="15" BorderThickness="0" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
+            <Label Content="Choisissez votre produit" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial Nova" Foreground="White"/>
+        </Border>
 
-        <Button Grid.Column="0" Grid.Row="1" Height="90" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,0,10,0" FontWeight="Bold" FontFamily="Arial Nova" Click="SuiviOpen">
+        <Button Grid.Column="0" Grid.Row="2" Click="SuiviOpen" VerticalAlignment="Top" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}">
             <Button.Tag>0,97 - Lettre verte</Button.Tag>
         </Button>
-        <Image Grid.Column="0" Grid.Row="1" Source="./img/product/lettre-verte.png" Margin="21,11,832,32"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Lettre verte" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="133,24,0,0"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="Distribué en 2 jours" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontFamily="Arial Nova" Margin="413,27,0,0"/>
-        <Label Grid.Column="0" Grid.Row="1" Content="0,97 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,27,45,0"/>
+        <Image Grid.Column="0" Grid.Row="2" Source="./img/product/lettre-verte.png" Margin="10,20,858,17"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Lettre verte" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="116,27,0,0" RenderTransformOrigin="0.501,0.701"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Distribuée en 2 jours" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontFamily="Arial Nova" Margin="463,29,0,0"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="0,97 €" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="843,0,0,0"/>
 
-        <Button Grid.Column="0" Grid.Row="1" Height="90" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,107,10,0" FontWeight="Bold" FontFamily="Arial Nova" Grid.RowSpan="2" Click="SuiviOpen">
-            <Button.Tag>1,16 - Lettre prioritaire</Button.Tag>
+        <Button Grid.Column="0" Grid.Row="3" Click="SuiviOpen" VerticalAlignment="Top" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}">
+            <Button.Tag>0,97 - Lettre prioritaire</Button.Tag>
         </Button>
-        <Image Grid.Column="0" Grid.Row="2" Source="./img/product/lettre-prioritaire.png" Margin="30,10,850,34" RenderTransformOrigin="0.068,0.545"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="Lettre prioritaire" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="128,20,0,0"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="Distribué en 1 jour" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontFamily="Arial Nova" Margin="413,27,0,0"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="1,16 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,27,45,0"/>
+        <Image Grid.Column="0" Grid.Row="3" Source="./img/product/lettre-prioritaire.png" Margin="20,16,862,15"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Lettre prioritaire" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="116,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Distribuée en 1 jour" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontFamily="Arial Nova" Margin="474,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="1,16 €" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="843,0,0,0"/>
 
-        <Button Grid.Column="0" Grid.Row="2" Height="90" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,108,10,0" FontWeight="Bold" FontFamily="Arial Nova" Grid.RowSpan="2" Click="SuiviOpen">
+        <Button Grid.Column="0" Grid.Row="4" Click="SuiviOpen" VerticalAlignment="Top" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}">
             <Button.Tag>0,95 - Ecopli</Button.Tag>
         </Button>
-        <Image Grid.Column="0" Grid.Row="3" Source="./img/product/ecopli.png" Margin="28,7,848,36"/>
-        <Label Grid.Column="0" Grid.Row="3" Content="Ecopli" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="133,20,0,0"/>
-        <Label Grid.Column="0" Grid.Row="3" Content="Distribué en 4 jours" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontFamily="Arial Nova" Margin="413,27,0,0"/>
-        <Label Grid.Column="0" Grid.Row="3" Content="0,95 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,27,45,0"/>
+        <Image Grid.Column="0" Grid.Row="4" Source="./img/product/ecopli.png" Margin="20,16,862,16"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="Ecopli" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="116,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="Distribuée en 4 jours" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontFamily="Arial Nova" Margin="475,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="0,95 €" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="843,0,0,0"/>
 
-        <Button Grid.Column="0" Grid.Row="3" Height="90" VerticalAlignment="Top" Cursor="Hand" Background="#FFFFFF" Margin="10,100,10,0" FontWeight="Bold" FontFamily="Arial Nova" Grid.RowSpan="2" Click="SuiviOpen">
-            <Button.Tag>1,42- Lettre de suivie</Button.Tag>
+        <Button Grid.Column="0" Grid.Row="5" Click="SuiviOpen" VerticalAlignment="Top" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}">
+            <Button.Tag>1,42 - Lettre suivie</Button.Tag>
         </Button>
-        <Image Grid.Column="0" Grid.Row="3" Source="./img/product/lettre-suivie.png" Margin="26,99,851,48" Grid.RowSpan="2"/>
-        <Label Grid.Column="0" Grid.Row="4" Content="Lettre de suivie" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Margin="133,13,0,0" RenderTransformOrigin="0.533,0.087"/>
-        <Label Grid.Column="0" Grid.Row="4" Content="Distribué en 2 jours,&#10; Envoi suivie" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontFamily="Arial Nova" Margin="424,4,0,0"/>
-        <Label Grid.Column="0" Grid.Row="4" Content="1,42 €" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="0,16,45,0"/>
+        <Image Grid.Column="0" Grid.Row="5" Source="./img/product/lettre-suivie.png" Margin="24,15,862,14"/>
+        <Label Grid.Column="0" Grid.Row="5" Content="Lettre suivie" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="116,0,0,0"/>
+        <Label Grid.Column="0" Grid.Row="5" Content="Distribuée en 2 jours&#10;Envoi suivi" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="22" FontFamily="Arial Nova" Margin="469,12,0,0"/>
+        <Label Grid.Column="0" Grid.Row="5" Content="1,42 €" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="843,0,0,0"/>
 
-        <Button Grid.Column="0" Grid.Row="5" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnDestinationWindow" Grid.RowSpan="2"/>
-        <Image Grid.Column="0" Grid.Row="5" Source="./img/shared/retour.png" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="50" Height="50" RenderTransformOrigin="0.101,0.528"/>
-        <Label Grid.Column="0" Grid.Row="5" Content="Retour" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="65,0,0,0"/>
+        <Button Grid.Column="0" Grid.Row="7" Background="Transparent" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnDestinationWindow" Grid.RowSpan="2" BorderThickness="0,0,0,0"/>
+        <Image Grid.Column="0" Grid.Row="7" Source="./img/shared/retour.png" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="50" Height="50" RenderTransformOrigin="0.101,0.528"/>
+        <Label Grid.Column="0" Grid.Row="7" Content="Retour" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="60,0,0,0"/>
     </Grid>
 </Window>

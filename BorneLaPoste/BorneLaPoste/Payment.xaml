@@ -1,10 +1,10 @@
-﻿<Window x:Class="BorneLaPoste.Suivi"
+﻿<Window x:Class="BorneLaPoste.Payment"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Page de suivi" Height="600" Width="950" Background="#FFA500"
+        Title="Page de payment" Height="600" Width="950" Background="#FFA500"
         ResizeMode="NoResize" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" WindowStartupLocation="CenterScreen">
 
     <Window.Resources>
@@ -33,21 +33,18 @@
         </Grid.ColumnDefinitions>
 
         <Border Grid.ColumnSpan="4" Background="#E74C3C" CornerRadius="15" BorderThickness="0" Margin="10" Padding="10" Effect="{StaticResource ShadowEffect}">
-            <Label Content="Souhaitez-vous un service de suivi" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial Nova" Foreground="White"/>
+            <Label x:Name="titlePayment" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="30" FontFamily="Arial Nova" Foreground="White" Cursor=""/>
         </Border>
 
-        <Button Grid.Column="0" Grid.Row="2" Click="OrderOpen" VerticalAlignment="Top" Background="White" Tag="0,45" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
-        <Image Grid.Column="0" Grid.Row="2" Source="./img/suivi/service-suivi.png" Margin="29,18,839,18"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="Service de suivi" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="146,0,0,0" RenderTransformOrigin="0.501,0.701"/>
-        <Label Grid.Column="0" Grid.Row="2" Content="0,45 €" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="841,0,0,0"/>
+        <Button Grid.Column="0" Grid.Row="2" VerticalAlignment="Top" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
+        <Image x:Name="imagePayment" Grid.Column="0" Grid.Row="2" Margin="29,18,839,19"/>
+        <Label x:Name="amountPayment" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="134,0,0,0" RenderTransformOrigin="0.501,0.701" Cursor="Hand"/>
 
-        <Button Grid.Column="0" Grid.Row="3" Click="OrderOpen" VerticalAlignment="Top" Background="White" Tag="0,0" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}"/>
-        <Image Grid.Column="0" Grid.Row="3" Source="./img/suivi/non-merci.png" Margin="29,18,839,18" RenderTransformOrigin="0.821,0.503"/>
-        <Label Grid.Column="0" Grid.Row="3" Content="Non, merci" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="146,0,0,0" RenderTransformOrigin="0.501,0.701"/>
+        <Button Grid.Column="0" Grid.Row="3" Background="Black" Height="120" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnPaymentChoiceWindow" Grid.RowSpan="2" BorderThickness="0,0,0,0" Margin="180,67,180,67"/>
+        <Label x:Name="textPayment" Grid.Row="3" VerticalAlignment="Center"  HorizontalAlignment="Center" FontSize="28" FontWeight="Bold" FontFamily="Arial Nova" Cursor="" Grid.RowSpan="2" Foreground="White"/>
 
-        <Button Grid.Column="0" Grid.Row="5" Background="Transparent" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnProductWindow" Grid.RowSpan="2" BorderThickness="0,0,0,0"/>
+        <Button Grid.Column="0" Grid.Row="5" Background="Transparent" Cursor="Hand" FontWeight="Bold" FontFamily="Arial Nova" Click="ReturnPaymentChoiceWindow" Grid.RowSpan="2" BorderThickness="0,0,0,0"/>
         <Image Grid.Column="0" Grid.Row="5" Source="./img/shared/retour.png" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10,0,0,0" Width="50" Height="50" RenderTransformOrigin="0.101,0.528"/>
         <Label Grid.Column="0" Grid.Row="5" Content="Retour" VerticalAlignment="Center"  HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" FontFamily="Arial Nova" Margin="60,0,0,0"/>
     </Grid>
 </Window>
-

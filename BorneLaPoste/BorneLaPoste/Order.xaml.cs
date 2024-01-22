@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Controls;
 using BorneLaPoste.Shared;
 
 namespace BorneLaPoste
@@ -64,13 +65,23 @@ namespace BorneLaPoste
         }
 
         /// <summary>
-        /// Open the card window
+        /// Open the payment choice window
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void CardOpen(object sender, RoutedEventArgs e)
+        private void PaymentChoiceOpen(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Payment effectué. Bonne journée à vous !", "Message de succès", MessageBoxButton.OK, MessageBoxImage.Information);
+            Utils utils = new Utils();
+            bool isFormOpen = utils.IsAlreadyOpen(typeof(PaymentChoice));
+
+            if (!isFormOpen)
+            {
+                PaymentChoice paymentChoiceForm = new PaymentChoice(OrderData);
+
+                paymentChoiceForm.Owner = Application.Current.MainWindow;
+                paymentChoiceForm.WindowStartupLocation = WindowStartupLocation.CenterScreen;
+                paymentChoiceForm.Show();
+            }
         }
     }
 }

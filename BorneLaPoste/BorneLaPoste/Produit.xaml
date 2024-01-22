@@ -47,7 +47,7 @@
         <Label Grid.Column="0" Grid.Row="2" Content="0,97 €" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="22" FontWeight="Bold" FontFamily="Arial Nova" Margin="843,0,0,0"/>
 
         <Button Grid.Column="0" Grid.Row="3" Click="SuiviOpen" VerticalAlignment="Top" Background="White" Style="{StaticResource MainButtonStyle}" Effect="{StaticResource ShadowEffect}">
-            <Button.Tag>0,97 - Lettre prioritaire</Button.Tag>
+            <Button.Tag>1,16 - Lettre prioritaire</Button.Tag>
         </Button>
         <Image Grid.Column="0" Grid.Row="3" Source="./img/product/lettre-prioritaire.png" Margin="20,16,862,15"/>
         <Label Grid.Column="0" Grid.Row="3" Content="Lettre prioritaire" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="26" FontWeight="Bold" FontFamily="Arial Nova" Margin="116,0,0,0"/>

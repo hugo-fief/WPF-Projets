@@ -63,6 +63,12 @@
     <Compile Include="Order.xaml.cs">
       <DependentUpon>Order.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Payment.xaml.cs">
+      <DependentUpon>Payment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentChoice.xaml.cs">
+      <DependentUpon>PaymentChoice.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Shared\OrderData.cs" />
     <Compile Include="Produit.xaml.cs">
       <DependentUpon>Produit.xaml</DependentUpon>
@@ -91,6 +97,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Order.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Payment.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PaymentChoice.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -191,6 +205,14 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="img\order\flèche-payment.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="img\payment\cb.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="img\payment\pièces.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
   </ItemGroup>
